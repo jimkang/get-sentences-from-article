@@ -1,0 +1,29 @@
+{
+  "name": "get-sentences-from-article",
+  "version": "1.0.0",
+  "description": "Extracts sentences from Wikipedia articles. Tries not to get section names or links.",
+  "main": "get-sentences-from-article.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jimkang/get-sentences-from-article.git"
+  },
+  "keywords": [],
+  "author": "Jim Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimkang/get-sentences-from-article/issues"
+  },
+  "homepage": "https://github.com/jimkang/get-sentences-from-article",
+  "devDependencies": {
+    "tape": "^3.0.3"
+  },
+  "dependencies": {
+    "jsonfile": "^2.2.3",
+    "lodash": "^3.10.1",
+    "nodemw": "^0.8.0",
+    "probable": "^1.8.0"
+  }
+}
