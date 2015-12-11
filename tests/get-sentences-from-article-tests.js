@@ -34,7 +34,7 @@ var testCases = [
   {
     article: fs.readFileSync(__dirname + '/data/salinger.txt', readOpts),
     sentences: [
-      'Salinger was born Jerome David Salinger in Manhattan, New York on January 1, 1919.',
+      'Salinger was born "Jerome David Salinger" in Manhattan, New York on January 1, 1919.',
       'Salinger began writing short stories while in secondary school.',
       'In 1936, he went to work in Austria, but left 2 years later, just before Germany took Austria over.',
       'Salinger published several stories in the early 1940s before serving in World War II.',

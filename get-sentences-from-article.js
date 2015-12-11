@@ -51,7 +51,7 @@ function desubscript(s) {
 }
 
 function removeTripleQuotes(s) {
-  return s.replace(tripleQuoteRe, '');
+  return s.replace(tripleQuoteRe, '"');
 }
 
 function parseSentences(s) {
