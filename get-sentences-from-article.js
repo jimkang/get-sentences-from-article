@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-var wikiLinkRe = /\[\[([\w\s-:_\.'\(\)]+)\]\]/g;
+var wikiLinkRe = /\[\[(.+?)\]\]/g;
 var pipeSeparatedRe = /\[\[([\w\s-:_\.'\(\)]+)\|([\w\s-:_\.'\(\)]+)\]\]/g;
 var superscriptRe = /<sup>(\w+)<\/sup>/g;
 var subscriptRe = /<sub>(\w+)<\/sub>/g;
@@ -47,6 +47,7 @@ function isTextLine(line) {
         line.indexOf('|') === 0 ||
         firstTwoChars === ' |' ||
         line.indexOf('<br>') !== -1 ||
+        line.indexOf('File:') !== -1 ||
         !line.match(wordRe)) {
 
         isTextLine = false;

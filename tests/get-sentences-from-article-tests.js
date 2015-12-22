@@ -55,7 +55,7 @@ var testCases = [
       "Salinger published several stories in the early 1940s before serving in World War II.",
       "In 1948 he published the story \"A Perfect Day for Bananafish\" in ''The New Yorker'' magazine, which also published most of his following work.",
       "In 1951, his first novel ''The Catcher in the Rye'' was published.",
-      "On January 27, 2010, Salinger died in his home in [[Cornish, New Hampshire]] of natural causes at age 91.",
+      "On January 27, 2010, Salinger died in his home in Cornish, New Hampshire of natural causes at age 91.",
       "Salinger did not like publicity: He never published an original work after 1965 and was never interviewed after 1980.",
       "On November 28, 2013, scans of three unpublished Salinger stories were uploaded to the Internet.",
       "It was done by a user of What.CD, an invite-only BitTorrent tracker site.",
@@ -73,7 +73,21 @@ var testCases = [
     sentences: [
       'The F-86 Sabre (nicknamed the "Sabre jet") was an American fighter plane made by North American Aviation.',
       'It first flew in 1947, and was introduced to battle the MiG-15 in the Korean War.',
-      'Unlike the fighter before it, the F-86 had swept wings to be faster.'      
+      'Unlike the fighter before it, the F-86 had swept wings to be faster.'
+    ]
+  },
+  {
+    article: fs.readFileSync(__dirname + '/data/foundation.txt', readOpts),
+    sentences: [
+      "A foundation is a kind of company set up to carry out charity or research work.",
+      "A foundation is usually endowed, which means it is given a large sum of money to do its work.",
+      "An example is the Rockefeller Foundation.",
+      "The Rockefeller family made their money from banking and oil and their family foundation is endowed with a very great sum of money.",
+      "The people running the foundation think of ways to use the money to help charities, the arts, or whatever they like.",
+      "Another example is the Bill & Melinda Gates Foundation.",
+      "Bill Gates made a fortune from Microsoft.",
+      "He and his wife now spend nearly all their time giving away the money he has made.",
+      "They give it to projects like education in the United States and treating AIDS in Third World countries."
     ]
   }
 ];
