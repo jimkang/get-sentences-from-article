@@ -1,20 +1,23 @@
 var _ = require('lodash');
 
-var wikiLinkRe = /\[\[(.+?)\]\]/g;
-var pipeSeparatedRe = /\[\[([\w\s-:_\.'\(\)]+)\|([\w\s-:_\.'\(\)]+)\]\]/g;
+var bracketLinkRe = /\[\[(.+?)\]\]/g;
+var braceLinkRe = /\{\{(.+?)\}\}/g;
 var superscriptRe = /<sup>(\w+)<\/sup>/g;
 var subscriptRe = /<sub>(\w+)<\/sub>/g;
 var tripleQuoteRe = /'''/g;
 var wordRe = /\w\w+/;
 var punctuationEndingRe = /[\.!?]$/;
-var bracesRe = /{{.*}}/g;
-var refTagRe = /<\/?ref>/g;
+var refTagRe = /<ref>.*?<\/ref>/g;
 
 function getSentencesFromArticle(article) {
   var cleaned = removeTripleQuotes(
     desubscript(
       desuperscript(
-        replaceLinks(article)
+        replaceLinks(
+          removeRefTags(
+            article
+          )
+        )
       )
     )
   );
@@ -23,16 +26,25 @@ function getSentencesFromArticle(article) {
   lines = lines.filter(isTextLine);
 
   return _.flatten(lines
-    .map(removeRefTags)
-    .map(removeBracesContent)
     .map(parseSentences)
   );
 }
 
-function replaceLinks(s) {
-  var replaced = s.replace(pipeSeparatedRe, '$2');
-  replaced = replaced.replace(wikiLinkRe, '$1');
+function replaceLinks(s) {  
+  var replaced = s.replace(bracketLinkRe, replaceBracketContents);
+  replaced = replaced.replace(braceLinkRe, replaceBracketContents);
   return replaced;
+}
+
+function replaceBracketContents(match, contents) {
+  var text = contents;
+  if (contents.indexOf('|') !== -1) {
+    var pieces = contents.split('|');
+    if (pieces.length > 0) {
+      text = pieces[pieces.length - 1];
+    }
+  }
+  return text;
 }
 
 function isTextLine(line) {
@@ -48,6 +60,7 @@ function isTextLine(line) {
         firstTwoChars === ' |' ||
         line.indexOf('<br>') !== -1 ||
         line.indexOf('File:') !== -1 ||
+        line.indexOf('Category:') !== -1 ||
         !line.match(wordRe)) {
 
         isTextLine = false;
@@ -67,10 +80,6 @@ function desubscript(s) {
 
 function removeTripleQuotes(s) {
   return s.replace(tripleQuoteRe, '');
-}
-
-function removeBracesContent(s) {
-  return s.replace(bracesRe, '');
 }
 
 function removeRefTags(s) {

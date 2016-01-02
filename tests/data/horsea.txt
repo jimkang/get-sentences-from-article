@@ -1,0 +1,54 @@
+{{PokémoncardInfobox |
+cardname=Horsea |
+jname=タッツー |
+jtrans=Tattu |
+image=HorseaEXTeamRocketReturns58.jpg |
+caption=Illus. [[Kagemaru Himeno]] |
+species=Horsea |
+evostage=Basic |
+type=Water |
+hp=50 |
+weakness=Lightning |
+retreatcost=1 |
+}}
+{{PokémoncardInfobox/Expansion|type=Water|expansion={{TCG|EX Team Rocket Returns}}|rarity={{rar|Common}}|cardno=58/109|jpexpansion={{TCG|Rocket Gang Strikes Back}}|jprarity={{rar|Common}}|jpcardno=022/084}}
+{{PokémoncardInfobox/Footer|type=Water|species=Horsea}}
+
+'''Horsea''' (Japanese: '''タッツー''' ''Tattu'') is a {{ct|Water}} Basic Pokémon card. It is part of the {{TCG|EX Team Rocket Returns}} expansion.
+
+==Card text==
+{{TCGAttack |
+type=Water |
+position=Top |
+cost={{e|Colorless}} |
+name=Water Plant |
+jname=アクアプラント |
+jtrans=Aqua Plant |
+damage= |
+effect=Search your discard pile for up to 2 {{e|Water}} Energy cards, show them to your opponent, and put them into your hand. |
+}}
+{{TCGAttack |
+type=Water |
+position=Bottom |
+cost={{e|Water}}{{e|Water}} |
+name=Swift |
+jname=スピードスター |
+jtrans=Speed Star |
+damage=30 |
+effect=This attack's damage isn't affected by Weakness, Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon. |
+}}
+
+==Trivia==
+===Origin===
+{{m|Swift}} is a [[move]] in the [[Pokémon games]]. While {{p|Horsea}} was incapable of learning it when this card was released, it could previously learn it via [[TM]] in [[Generation I]] and [[Generation II]], and later regained the ability to learn it via [[Move Tutor]] in {{game|Emerald}}.
+
+{{Project TCG notice}}
+
+[[Category:EX Team Rocket Returns cards]]
+[[Category:Rocket Gang Strikes Back cards]]
+[[Category:Illus. by Kagemaru Himeno]]
+
+[[de:Seeper (EX Team Rocket Returns 58)]]
+[[fr:Horsea (EX Team Rocket Returns 58)]]
+[[it:Horsea (EX Team Rocket Returns 58)]]
+[[ja:タッツー (PCG3-B)]]

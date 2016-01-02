@@ -62,6 +62,7 @@ var testCases = [
       "The file was quickly removed by administrators of the site.",
       "It is not currently clear how the unpublished material was uploaded, as the original gangster sources came from two different locations (the University of Texas and Princeton).",
       "This shows that the works may have been obtained on separate occasions and then put together.",
+      "Salinger\'s unpublished works quickly spread over to open BitTorrent sites like The Pirate Bay and image-sharing sites such as Imgur.",
       "Despite What.CD's quick response, Salinger's unpublished writings will forever be available on the internet.",
       "*Salinger, Margaret 2000.",
       "''Dream catcher: reflections on reclusion''.",
@@ -88,6 +89,17 @@ var testCases = [
       "Bill Gates made a fortune from Microsoft.",
       "He and his wife now spend nearly all their time giving away the money he has made.",
       "They give it to projects like education in the United States and treating AIDS in Third World countries."
+    ]
+  },
+  {
+    article: fs.readFileSync(__dirname + '/data/horsea.txt', readOpts),
+    sentences: [
+      "Horsea (Japanese: タッツー ''Tattu'') is a Water Basic Pokémon card.",
+      "It is part of the EX Team Rocket Returns expansion.",
+      "effect=Search your discard pile for up to 2 Water Energy cards, show them to your opponent, and put them into your hand.",
+      "effect=This attack's damage isn't affected by Weakness, Resistance, Poké-Powers, Poké-Bodies, or any other effects on the Defending Pokémon.",
+      "Swift is a move in the Pokémon games.",
+      "While Horsea was incapable of learning it when this card was released, it could previously learn it via TM in Generation I and Generation II, and later regained the ability to learn it via Move Tutor in Emerald."
     ]
   }
 ];
