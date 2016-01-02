@@ -1,6 +1,6 @@
 {
   "name": "get-sentences-from-article",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Extracts sentences from Wikipedia articles. Tries not to get section names or links.",
   "main": "get-sentences-from-article.js",
   "scripts": {
